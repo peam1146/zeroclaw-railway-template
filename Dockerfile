@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone ZeroClaw repository
-ARG ZEROCLAW_VERSION=main
+ARG ZEROCLAW_VERSION=v0.1.6
 RUN git clone --depth 1 --branch ${ZEROCLAW_VERSION} https://github.com/zeroclaw-labs/zeroclaw.git .
 
 # Build ZeroClaw in release mode
